@@ -1,0 +1,185 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.img-parallax {
+    width: 100vmax;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    pointer-events: none
+}
+
+/*Title*/
+
+.title {
+    margin-top: -85vh;
+    margin-left: 50%;
+    font-weight: bold;
+    font-size: 9vh;
+    position: absolute;
+}
+
+/*BODY TEXT*/
+
+.body-text {
+    text-align: justify;
+    margin-top: -70vh;
+    width: 98%;
+    font-size: 3vh;
+    display: block;
+    margin-left: 5vh;
+}
+
+.white {
+    color: #fff;
+}
+
+.black {
+    color: #000;
+}
+
+/*Arrow*/
+
+@-webkit-keyframes bounce {
+    0% {
+        top: 0;
+        animation-timing-function: ease-out;
+    }
+    17% {
+        top: 15px;
+        animation-timing-function: ease-in;
+    }
+    34% {
+        top: 0;
+        animation-timing-function: ease-out;
+    }
+    51% {
+        top: 8px;
+        animation-timing-function: ease-in;
+    }
+    68% {
+        top: 0px;
+        animation-timing-function: ease-out;
+    }
+    85% {
+        top: 3px;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@-moz-keyframes bounce {
+    0% {
+        top: 0;
+        animation-timing-function: ease-out;
+    }
+    17% {
+        top: 15px;
+        animation-timing-function: ease-in;
+    }
+    34% {
+        top: 0;
+        animation-timing-function: ease-out;
+    }
+    51% {
+        top: 8px;
+        animation-timing-function: ease-in;
+    }
+    68% {
+        top: 0px;
+        animation-timing-function: ease-out;
+    }
+    85% {
+        top: 3px;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        top: 0;
+        animation-timing-function: ease-out;
+    }
+    17% {
+        top: 15px;
+        animation-timing-function: ease-in;
+    }
+    34% {
+        top: 0;
+        animation-timing-function: ease-out;
+    }
+    51% {
+        top: 8px;
+        animation-timing-function: ease-in;
+    }
+    68% {
+        top: 0px;
+    }
+    85% {
+        top: 3px;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+#container {
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    margin-top: -10vh;
+    left: 50%;
+    width: 4vh;
+    height: 4vh;
+    border-left: 5px solid #000;
+    /*Width*/
+    border-bottom: 5px solid #000;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb05 1.5s infinite;
+    animation: sdb05 1.5s infinite;
+    box-sizing: border-box;
+}
+
+.arrow.animated {
+    -moz-animation: bounce 1s;
+    -webkit-animation: bounce 1s;
+    animation: bounce 1s;
+}
+
+/*Timeline*/
+
+.timeline {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 650px;
+    margin-top: 7vh;
+    width: 90%;
+}
+
+/*1st Module Filler*/
+
+.header-image {
+    background-color: #529FDB;
+}
+
+.top-image {
+    height: 90%;
+    width: 100%;
+    background-color: #529FDB;
+    margin-top: 50px;
+
+}

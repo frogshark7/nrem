@@ -1,0 +1,263 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.img-parallax {
+    width: 100vmax;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, 0);
+    pointer-events: none
+}
+
+/*TEXT*/
+
+.title {
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 7vh;
+    margin-right: 5vh;
+}
+
+.type-title {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    display: block;
+    font-size: 6vh;
+    color: #000;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.title-last {
+    color: #fff;
+    margin-top: 50px;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 7vh;
+}
+
+.right-text {
+    float: right;
+    text-align: justify;
+    font-size: 4vh;
+    color: #fff;
+    padding-right: 5vh;
+    position: relative;
+    display: block;
+    margin-top: 80px;
+}
+
+.image-stuck {
+    display: inline-block;
+    margin-top: 2.8vh
+}
+
+.Sub-text {
+    margin-top: 2vh;
+    text-align: justify;
+    position: relative;
+    font-size: 2.75vh;
+}
+
+.Sub-head {
+    position: relative;
+    font-weight: bold;
+    font-size: 4vh;
+    margin-top: 10vh;
+    text-align: justify;
+    background-color: #fff;
+}
+
+.text-body_left {
+    margin-left: 10%;
+}
+
+.text-body_right {
+    margin-left: -5%;
+}
+
+.text-body {
+    font-size: 4vh;
+    margin-left: 4vh;
+    margin-right: 4vh;
+    color: #fff;
+}
+
+.mid-head {
+    font-size: 6vh;
+    color: #fff;
+    text-align: center;
+    margin-top: 7vh;
+    font-weight: bold;
+}
+
+.mid-text {
+    color: #fff;
+    font-size: 3vh;
+    margin: 0 4vh 4vh 4vh;
+}
+
+.block-text {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    text-align: justify;
+    background-image: url(../Pics/cc/Types-cc.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 38%;
+}
+
+.space {
+    margin-right: 7vh;
+    background-color: #434343;
+    color: #434343;
+}
+
+.top-img {
+    margin-top: 20vh;
+    display: inline-block;
+    position: absolute;
+}
+
+/*Collapse Info*/
+
+.title-coll {
+    color: #000;
+    background-color: #fff;
+    position: relative;
+    font-weight: bold;
+    font-size: 4vh;
+    margin-top: 40vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 8%;
+    text-align: center;
+}
+
+.text-collapse {
+    font-size: 3vh;
+    float: left;
+    text-align: justify;
+    background-color: #fff;
+    margin-right: 5vh;
+    margin-left: 5vh;
+    color: #000;
+    font-weight: 100;
+}
+
+.white {
+    color: #fff;
+    width: 100%;
+}
+
+.t-mod {
+    background-color: #434343;
+    background-image: url(../Pics/cc/cc-deploy.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 80%;
+}
+
+.title-deploy {
+    color: #529FDB;
+    text-align: center;
+    font-size: 6vh;
+    font-weight: bold;
+    margin-top: 6%;
+}
+
+.cloud-cen {
+    color: #fff;
+    background-color: #529FDB;
+    padding: 2vh;
+    font-size: 2.3vh;
+    margin-top: 8%;
+}
+
+.cloud-side {
+    color: #fff;
+    background-color: #529FDB;
+    padding: 2vh;
+    font-size: 2.3vh;
+    margin-top: 2%;
+}
+
+.img-public {
+    margin-top: 15vh;
+    margin-left: 2vh;
+    height: 25vh;
+    display: block;
+}
+
+.img-private {
+    margin-top: 15vh;
+    height: 25vh;
+    display: block;
+    margin-left: 15vh
+}
+
+.img-hybrid {
+    margin-top: 12vh;
+    height: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.top-cc {
+    background-image: url(../Pics/cc/cloud_net-cc.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0%;
+    background-attachment: fixed;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: -1vh;
+}
+
+.li-title {
+    font-weight: bold;
+    font-size: 4vh;
+    color: #fff;
+}
+
+.items {
+    font-size: 3vh;
+    color: #fff;
+    text-align: justify;
+}
+
+.bottom-image {
+    height: auto;
+}
+
+.right {
+    margin-left: 5vh;
+}
+
+/*Uses IMG*/
+
+.uses-img-left {
+    height:20vh;
+    float: left;
+    margin-left: 1vh;
+}
+
+.uses-img-right {
+    height:20vh;
+    float: right;
+    margin-right: 1vh;
+}
