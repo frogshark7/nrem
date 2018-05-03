@@ -19,8 +19,8 @@ void loop() {
 
   sensorValue0 = analogRead(sensorPin0); // read the value from the sensor
   voltage = sensorValue0 * 5 / 1023;
-  printcalc();
   glucon = 16.522 * voltage - 35.294;
+  printcalc();
 
   if (glucon > 140) {
     lcd.display();
