@@ -1,44 +1,41 @@
-#include <LiquidCrystal.h>
-
-LiquidCrystal lcd(12, 11, 4, 5, 6, 7);
-int sensorPin0 = A0; // select the input pin for ldr
 int sensorValue0 = 0; // variable to store the value coming from the sensor
 float glucon;
 int voltage;
 
-
 void setup() {
   // put your setup code here, to run once:
-  lcd.begin(16, 1);
   Serial.begin(9600);
-  pinMode(13, OUTPUT);
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
 }
 
 void loop() {
-  digitalWrite(13, HIGH);
+  digitalWrite(5, HIGH);
 
-  sensorValue0 = analogRead(sensorPin0); // read the value from the sensor
+  sensorValue0 = analogRead(A0); // read the value from the sensor
   voltage = sensorValue0 * 5 / 1023;
   glucon = 16.522 * voltage - 35.294;
   printcalc();
-
-  if (glucon > 140) {
-    lcd.display();
-    lcd.setCursor(5, 0);
-    lcd.print("HIGH");
-  } else if (glucon < 60) {
-    lcd.display();
-    lcd.setCursor(6, 0);
-    lcd.print("LOW");
-  } else {
-    lcd.display();
-    lcd.setCursor(5, 0);
-    lcd.print("GOOD");
-  }
+  led_out();
 }
 
 void printcalc() {
-  printf("%f", glucon);
+  Serial.println(glucon);
   delay(100);
 }
 
+void led_out() {
+  if (glucon > 140) {
+    digitalWrite(2, HIGH);
+  } else if (glucon > 60 && glucon < 140) {
+    digitalWrite(3, HIGH);
+  } else if (glucon < 60) {
+    digitalWrite(4, HIGH);
+  } else {
+    digitalWrite(2, LOW);
+    digitalWrite(3, LOW);
+    digitalWrite(4, LOW);
+  }
+}
