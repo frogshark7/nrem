@@ -12,7 +12,7 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(13, HIGH); 
+  digitalWrite(13, HIGH);
   sensorValue0 = analogRead(A0);
   voltage = sensorValue0 * 5 / 1023; //Volt convert
   glucon = 16.522 * voltage - 35.294; //Glucose Value
@@ -25,7 +25,7 @@ void printcalc() {
   delay(100);
 }
 
-void lcdout{
+void lcdout() {
   if (glucon > 140) {
     lcd.display();
     lcd.setCursor(5, 0);
@@ -39,3 +39,4 @@ void lcdout{
     lcd.setCursor(5, 0);
     lcd.print("GOOD");
   }
+}
