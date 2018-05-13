@@ -1,41 +1,43 @@
-int sensorValue0 = 0; // variable to store the value coming from the sensor
-float glucon;
-int voltage;
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12, 11, 4, 5, 6, 7); //LCD Setup
+int sensorPin0 = A0; //Input Pin Photodiode
+int sensorValue0 = 0; //Input Var
+float glucon; //Glucose Concentration
+int voltage;  //Photodiode Voltage
 
 void setup() {
   // put your setup code here, to run once:
+  lcd.begin(16, 1);
   Serial.begin(9600);
-  pinMode(2, OUTPUT);
-  pinMode(3, OUTPUT);
-  pinMode(4, OUTPUT);
-  pinMode(5, OUTPUT);
+  pinMode(13, OUTPUT); //Infra LED Pin
 }
 
 void loop() {
-  digitalWrite(5, HIGH);
-
-  sensorValue0 = analogRead(A0); // read the value from the sensor
-  voltage = sensorValue0 * 5 / 1023;
-  glucon = 16.522 * voltage - 35.294;
+  digitalWrite(13, HIGH); 
+  sensorValue0 = analogRead(sensorPin0);
+  voltage = sensorValue0 * 5 / 1023; //Volt convert
+  glucon = 16.522 * voltage - 35.294; //Glucose Value
   printcalc();
-  led_out();
+  lcdout();
 }
 
 void printcalc() {
-  Serial.println(glucon);
+  printf("%f", glucon);
   delay(100);
 }
 
-void led_out() {
+void lcdout{
   if (glucon > 140) {
-    digitalWrite(2, HIGH);
-  } else if (glucon > 60 && glucon < 140) {
-    digitalWrite(3, HIGH);
+    lcd.display();
+    lcd.setCursor(5, 0);
+    lcd.print("HIGH");
   } else if (glucon < 60) {
-    digitalWrite(4, HIGH);
+    lcd.display();
+    lcd.setCursor(6, 0);
+    lcd.print("LOW");
   } else {
-    digitalWrite(2, LOW);
-    digitalWrite(3, LOW);
-    digitalWrite(4, LOW);
+    lcd.display();
+    lcd.setCursor(5, 0);
+    lcd.print("GOOD");
   }
-}
